@@ -13,10 +13,7 @@ mkdir -p .vscode
 # Copy snippets
 cp ~/latex-config/latex.json .vscode/
 
-# Copy platform-specific settings
-cp ~/latex-config/settings.$PLATFORM.json .vscode/
-
-# Create main settings file that includes everything
+# Create main settings file
 cat > .vscode/settings.json << 'EOF'
 {
   // ===== LaTeX-Workshop Settings =====
@@ -59,8 +56,7 @@ cat > .vscode/settings.json << 'EOF'
     "**/*.toc": true,
     "**/*.synctex.gz": true,
     "**/out": true
-  }
-}
+  },
 EOF
 
 # Add platform-specific PATH configuration
