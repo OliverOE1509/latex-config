@@ -1,43 +1,57 @@
 {
-  // ===== LaTeX-Workshop Settings =====
-  "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.latex.autoClean.run": "onFailed",
-  "latex-workshop.latex.recipe.default": "lastUsed",
-  "latex-workshop.latex.outDir": "%DIR%/out",
-  "latex-workshop.view.pdf.viewer": "tab",
-  
-  // ===== Snippets =====
-  "latex.snippets.user": [
-    "${workspaceFolder}/.vscode/latex.json"
-  ],
-  
-  // ===== Tools (Platform Agnostic) =====
-  "latex-workshop.latex.tools": [
-    {
-      "name": "latexmk",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        "-outdir=%OUTDIR%",
-        "%DOC%"
-      ]
-    }
-  ],
-  
-  // ===== File Exclusions =====
-  "files.exclude": {
-    "**/*.aux": true,
-    "**/*.bbl": true,
-    "**/*.blg": true,
-    "**/*.fdb_latexmk": true,
-    "**/*.fls": true,
-    "**/*.log": true,
-    "**/*.out": true,
-    "**/*.toc": true,
-    "**/*.synctex.gz": true,
-    "**/out": true
+  "Placeholder Snippet": {
+    "prefix": "desc",
+    "body": [
+      "\\begin{description}",
+      "\t\\item[$1] $0",
+      "\\end{description}"
+    ],
+    "description": "Create a description environment"
+  },
+  "Figure Environment": {
+    "prefix": "fig",
+    "body": [
+      "\\begin{figure}[ht]",
+      "\t\\centering",
+      "\t\\includegraphics[width=0.8\\linewidth]{$1}",
+      "\t\\caption{${2:Caption}}",
+      "\t\\label{fig:${3:label}}",
+      "\\end{figure}"
+    ],
+    "description": "Insert a figure environment"
+  },
+  "Equation Environment": {
+    "prefix": "eq",
+    "body": [
+      "\\begin{equation}",
+      "\t$0",
+      "\\end{equation}"
+    ],
+    "description": "Insert an equation environment"
+  },
+  "Align Environment": {
+    "prefix": "algn",
+    "body": [
+      "\\begin{align*}",
+      "\t$1",
+      "\\end{align*}",
+      "$0"
+    ],
+    "description": "Insert an align environment"
+  },
+  "Inline Math": {
+    "prefix": "mm",
+    "body": ["$$1$ $0"],
+    "description": "Inline math mode $ ... $"
+  },
+  "Display Math": {
+    "prefix": "dm",
+    "body": [
+      "\\[",
+      "\t$1",
+      "\\]",
+      "$0"
+    ],
+    "description": "Display math mode \\[ ... \\]"
   }
 }

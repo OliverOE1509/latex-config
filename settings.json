@@ -6,7 +6,7 @@
   "latex-workshop.latex.outDir": "%DIR%/out",
   "latex-workshop.view.pdf.viewer": "tab",
   
-  // ===== Snippets =====
+  // ===== Snippets Configuration =====
   "latex.snippets.user": [
     "${workspaceFolder}/.vscode/latex.json"
   ],
